@@ -6,4 +6,12 @@ class Boat < ActiveRecord::Base
   def self.first_five
 
   end
+
+  def self.dinghy
+
+  end
+
+  def self.ship
+
+  end
 end
