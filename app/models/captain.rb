@@ -9,7 +9,7 @@ class Captain < ActiveRecord::Base
   def self.sailors
     sailboat = Classification.find_by(name: "Sailboat")
     binding.pry
-    sailboat.boats.collect{|boat| boat.captain}.compact
+    sailboat.boats.collect{|boat| boat.captain}.compact.uniq
   end
 
   def self.talented_seafarers
