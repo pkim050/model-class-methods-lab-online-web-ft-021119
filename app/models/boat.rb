@@ -22,4 +22,8 @@ class Boat < ActiveRecord::Base
   def self.without_a_captain
 
   end
+
+  def self.mailboats
+
+  end
 end
