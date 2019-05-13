@@ -14,4 +14,12 @@ class Boat < ActiveRecord::Base
   def self.ship
 
   end
+
+  def self.last_three_alphabetically
+
+  end
+
+  def self.without_a_captain
+
+  end
 end
