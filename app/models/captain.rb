@@ -13,7 +13,11 @@ class Captain < ActiveRecord::Base
   end
 
   def self.talented_seafarers
-
+    motorboat = Classification.find_by(name: "Motorboat")
+    motor_cap = motorboat.boats.collect{|boat| boat.captain}.compact.uniq
+    sailboat = Classification.find_by(name: "Sailboat")
+    sail_cap = sailboat.boats.collect{|boat| boat.captain}.compact.uniq
+    motor_cap & sail_cap
   end
 
   def self.non_sailors
